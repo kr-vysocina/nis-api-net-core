@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AssemblyName>cz.kr_vysocina.nis.v11.service</AssemblyName>
+        <RootNamespace>cz.kr_vysocina.nis.v11.service</RootNamespace>
+        <Title>NIS API v11</Title>
+        <Authors>scalesoft s.r.o</Authors>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\cz.kr_vysocina.nis.v11.api\cz.kr_vysocina.nis.v11.api.csproj" />
+      <ProjectReference Include="..\cz.kr_vysocina.nis.v11.core\cz.kr_vysocina.nis.v11.core.csproj" />
+      <ProjectReference Include="..\cz.kr_vysocina.nis.v11.mock\cz.kr_vysocina.nis.v11.mock.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer" Version="2.2.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.5" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="5.5.1" />
+    </ItemGroup>
+
+</Project>
