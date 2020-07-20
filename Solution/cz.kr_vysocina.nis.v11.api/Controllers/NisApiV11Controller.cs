@@ -28,7 +28,17 @@ namespace cz.kr_vysocina.nis.v11.api.Controllers
         [Produces("application/xml")]
         public IActionResult SayHello()
         {
+            if (m_logger.IsEnabled(LogLevel.Debug))
+            {
+                m_logger.LogDebug("Running sayHello");
+            }
+            
             var result = m_dataProvider.GetSayHelloData();
+            
+            if (m_logger.IsEnabled(LogLevel.Debug))
+            {
+                m_logger.LogDebug("Returning result of sayHello");
+            }
 
             if (result != null)
             {
