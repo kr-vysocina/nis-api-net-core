@@ -1,11 +1,11 @@
-﻿Návod k použití      
+﻿# Návod k použití      
 
-Založit ASP.NET nebo ASP.NET Core Web Application projekt
+* Založit ASP.NET Web Application nebo ASP.NET Core Web Application projekt
 
-Přidat závislost na nuget balíčku cz.kr_vysocina.nis.v11.api
+* Přidat závislost na nuget balíčku `cz.kr_vysocina.nis.v11.api`
 
-Ve třídě Startup.cs je nutné mít následující implementaci
-        
+* Ve třídě `Startup.cs` je nutné mít následující implementaci
+   ```     
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IDataProvider, MockDataProvider>(); //Registrace implementace pro získání dat pod interface IDataProvider
@@ -25,9 +25,10 @@ Ve třídě Startup.cs je nutné mít následující implementaci
             app.UseRouting(); //Použít routování pomocí Route atributu který NIS API Controller používá            
             app.UseEndpoints(routes => { routes.MapControllers(); }); //Povolit mapování route na controllery
         }
-        
-Případně je možné definovat vlastní controller a použít dědičnost
+   ```   
+* Případně je možné definovat vlastní controller a použít dědičnost
 
+```
     public class NISApiV11CustomController : NisApiV11Controller
     {
         public NISApiV11CustomController(
@@ -37,9 +38,9 @@ Případně je možné definovat vlastní controller a použít dědičnost
         {
         }
     }
-    
-Lze přidat závislost na nuget balíčku cz.kr_vysocina.nis.v11.mock a registrovat implementaci MockDataProvider pro vyzkoušení, zda služba běží a vrací mockovaná data
+``` 
+* Lze přidat závislost na nuget balíčku `cz.kr_vysocina.nis.v11.mock` a registrovat implementaci `MockDataProvider` pro vyzkoušení, zda služba běží a vrací mockovaná data
 
-Případně je možné použít pouze balíček cz.kr_vysocina.nis.v11.core, který obsahuje datové modely, a implementovat vlastní rozhraní
+* Případně je možné použít pouze balíček `cz.kr_vysocina.nis.v11.core`, který obsahuje datové modely, a implementovat vlastní rozhraní
 
-Pro logování je použit nuget balíček Microsoft.Extensions.Logging.Abstractions, lze tedy zaregistrovat libovolné řešení pro logování, které jej podporuje, a při povolení debug levelu se začnou logovat informace o provolání příslušných metod (například nuget balíček Microsoft.Extensions.Logging)
+* Pro logování je použit nuget balíček `Microsoft.Extensions.Logging.Abstractions`, lze tedy zaregistrovat libovolné řešení pro logování, které jej podporuje, a při povolení debug levelu se začnou logovat informace o provolání příslušných metod (například nuget balíček `Microsoft.Extensions.Logging`)
