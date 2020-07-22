@@ -40,4 +40,4 @@ Lze přidat závislost na nuget balíčku cz.kr_vysocina.nis.v11.mock a registro
 
 Případně je možné použít pouze balíček cz.kr_vysocina.nis.v11.core, který obsahuje datové modely, a implementovat vlastní rozhraní
 
-Pro logování je použit nuget balíček Microsoft.Extensions.Logging.Abstractions, lze tedy zaregistrovat libovolné řešení pro logování, které jej podporuje, a při povolení debug levelu se začnou logovat informace o provolání příslušných metod
+Pro logování je použit nuget balíček Microsoft.Extensions.Logging.Abstractions, lze tedy zaregistrovat libovolné řešení pro logování, které jej podporuje, a při povolení debug levelu se začnou logovat informace o provolání příslušných metod (například nuget balíček Microsoft.Extensions.Logging)
