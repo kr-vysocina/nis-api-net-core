@@ -1,5 +1,7 @@
 ﻿Návod k použití      
 
+Založit ASP.NET nebo ASP.NET Core Web Application projekt
+
 Přidat závislost na nuget balíčku cz.kr_vysocina.nis.v11.api
 
 Ve třídě Startup.cs je nutné mít následující implementaci
