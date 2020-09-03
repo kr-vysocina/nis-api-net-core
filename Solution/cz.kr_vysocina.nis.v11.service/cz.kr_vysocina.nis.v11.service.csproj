@@ -6,6 +6,7 @@
         <RootNamespace>cz.kr_vysocina.nis.v11.service</RootNamespace>
         <Title>NIS API v11</Title>
         <Authors>scalesoft s.r.o</Authors>
+        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
