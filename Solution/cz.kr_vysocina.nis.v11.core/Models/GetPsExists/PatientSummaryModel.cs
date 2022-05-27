@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace cz.kr_vysocina.nis.v11.core.Models.GetPsExists
@@ -36,5 +37,9 @@ namespace cz.kr_vysocina.nis.v11.core.Models.GetPsExists
 
         [XmlElement(ElementName="cdaL1Oid")]
         public string CdaL1Oid { get; set; }
+        
+        [XmlArray("documentList")]
+        [XmlArrayItem("document")]
+        public List<DocumentMetadataModel> DocumentList { get; set; }
     }
 }
