@@ -14,7 +14,8 @@ namespace cz.kr_vysocina.nis.v11.mock
             var result = new SayHelloModel
             {
                 ServerTime = DateTime.UtcNow.ToString("s", System.Globalization.CultureInfo.InvariantCulture),
-                Description = "Test NIS api service implementing V11 standard - Zdrojový systém XYZ, verze 2.01, produkční",
+                Description =
+                    "Test NIS api service implementing V11 standard - Zdrojový systém XYZ, verze 2.01, produkční",
                 LiveSourceList = new List<LiveSourceModel>
                 {
                     new LiveSourceModel
@@ -82,7 +83,8 @@ namespace cz.kr_vysocina.nis.v11.mock
                                 Label = "Propouštěcí zpráva ve formátu PDF",
                                 Type = "propousteci-zprava",
                                 EffectiveTime = "20160122153400",
-                            },                            new DocumentMetadataModel
+                            },
+                            new DocumentMetadataModel
                             {
                                 Id = "ICZ123940.5",
                                 Oid = "1.2.203.24341.1.10.35001000.8.1",
