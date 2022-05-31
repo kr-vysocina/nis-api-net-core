@@ -107,9 +107,9 @@ namespace cz.kr_vysocina.nis.v11.mock
             PurposeOfUse purposeOfUse,
             string subjectNameId,
             string requestOrganizationId,
-            CDAType cdaType,
-            string cdaId,
-            string cdaOid,
+            string documentType,
+            string documentId,
+            string documentOid,
             string requestId
         )
         {

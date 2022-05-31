@@ -12,6 +12,6 @@ namespace cz.kr_vysocina.nis.v11.core.Providers
             string requestOrganizationId, string requestId);
 
         byte[] GetPsCdaData(string sourceIdentifier, IdType idType, string idValue, PurposeOfUse purposeOfUse, string subjectNameId,
-            string requestOrganizationId, CDAType cdaType, string cdaId, string cdaOid, string requestId);
+            string requestOrganizationId, string documentType, string documentId, string documentOid, string requestId);
     }
 }

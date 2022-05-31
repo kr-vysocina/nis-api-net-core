@@ -107,9 +107,9 @@ namespace cz.kr_vysocina.nis.v11.api.Controllers
             [FromQuery] [Required] PurposeOfUse? purposeOfUse,
             [FromQuery] [Required] string subjectNameId,
             [FromQuery] string requestOrgId,
-            [FromQuery] [Required] CDAType cdaType,
-            [FromQuery] [Required] string cdaId,
-            [FromQuery] [Required] string cdaOid,
+            [FromQuery] [Required] string documentType,
+            [FromQuery] [Required] string documentId,
+            [FromQuery] [Required] string documentOid,
             [FromQuery] [Required] string requestId
         )
         {
@@ -134,7 +134,7 @@ namespace cz.kr_vysocina.nis.v11.api.Controllers
             }
 
             var result = m_dataProvider.GetPsCdaData(sourceIdentifier, idType.Value, idValue, purposeOfUse.Value, subjectNameId,
-                requestOrgId, cdaType, cdaId, cdaOid, requestId);
+                requestOrgId, documentType, documentId, documentOid, requestId);
 
             if (m_logger.IsEnabled(LogLevel.Debug))
             {
