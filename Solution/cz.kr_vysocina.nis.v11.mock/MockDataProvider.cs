@@ -14,7 +14,8 @@ namespace cz.kr_vysocina.nis.v11.mock
             var result = new SayHelloModel
             {
                 ServerTime = DateTime.UtcNow.ToString("s", System.Globalization.CultureInfo.InvariantCulture),
-                Description = "Test NIS api service implementing V11 standard - Zdrojový systém XYZ, verze 2.01, produkční",
+                Description =
+                    "Test NIS api service implementing V11 standard - Zdrojový systém XYZ, verze 2.01, produkční",
                 LiveSourceList = new List<LiveSourceModel>
                 {
                     new LiveSourceModel
@@ -64,7 +65,34 @@ namespace cz.kr_vysocina.nis.v11.mock
                         EffectiveTime = "20171207153400",
                         CdaL1Support = true,
                         CdaL1Id = "ICZ123940.2",
-                        CdaL1Oid = "1.2.203.24341.1.10.35001000.4"
+                        CdaL1Oid = "1.2.203.24341.1.10.35001000.4",
+                        DocumentList = new List<DocumentMetadataModel>
+                        {
+                            new DocumentMetadataModel
+                            {
+                                Id = "ICZ123940.3",
+                                Oid = "1.2.203.24341.1.10.35001000.6.1",
+                                Label = "Ambulantní zpráva ve formátu PDF",
+                                Type = "ambulantni-zprava",
+                                EffectiveTime = "20220107153400",
+                            },
+                            new DocumentMetadataModel
+                            {
+                                Id = "ICZ123940.4",
+                                Oid = "1.2.203.24341.1.10.35001000.7.1",
+                                Label = "Propouštěcí zpráva ve formátu PDF",
+                                Type = "propousteci-zprava",
+                                EffectiveTime = "20160122153400",
+                            },
+                            new DocumentMetadataModel
+                            {
+                                Id = "ICZ123940.5",
+                                Oid = "1.2.203.24341.1.10.35001000.8.1",
+                                Label = "Jakýkoliv jiný dokument ve formátu PDF",
+                                Type = "ostatni",
+                                EffectiveTime = "20160122153400",
+                            },
+                        }
                     }
                 }
             };
@@ -79,7 +107,7 @@ namespace cz.kr_vysocina.nis.v11.mock
             PurposeOfUse purposeOfUse,
             string subjectNameId,
             string requestOrganizationId,
-            CDAType cdaType,
+            string cdaType,
             string cdaId,
             string cdaOid,
             string requestId

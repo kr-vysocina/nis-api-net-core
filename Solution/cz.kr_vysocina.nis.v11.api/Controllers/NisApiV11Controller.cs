@@ -107,7 +107,7 @@ namespace cz.kr_vysocina.nis.v11.api.Controllers
             [FromQuery] [Required] PurposeOfUse? purposeOfUse,
             [FromQuery] [Required] string subjectNameId,
             [FromQuery] string requestOrgId,
-            [FromQuery] [Required] CDAType cdaType,
+            [FromQuery] [Required] string cdaType,
             [FromQuery] [Required] string cdaId,
             [FromQuery] [Required] string cdaOid,
             [FromQuery] [Required] string requestId
