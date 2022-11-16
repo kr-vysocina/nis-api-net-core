@@ -18,5 +18,11 @@ namespace cz.kr_vysocina.nis.v11.core.Models.GetPsExists
         
         [XmlElement(ElementName="effectiveTime")]
         public string EffectiveTime { get; set; }
+        
+        [XmlElement(ElementName="documentSize")]
+        public long? DocumentSize { get; set; }
+        
+        [XmlElement(ElementName="documentHash")]
+        public string DocumentHash { get; set; }
     }
 }
