@@ -53,6 +53,7 @@ namespace cz.kr_vysocina.nis.v11.api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Produces("application/xml")]
         public IActionResult GetPsExists(
+            [FromQuery] string idRID,
             [FromQuery] [Required] IdType? idType,
             [FromQuery] [Required] string idValue,
             [FromQuery] [Required] PurposeOfUse? purposeOfUse,
@@ -81,7 +82,7 @@ namespace cz.kr_vysocina.nis.v11.api.Controllers
                 return BadRequest("Required parameter is null or empty");
             }
 
-            var result = m_dataProvider.GetPsExistsData(idType.Value, idValue, purposeOfUse.Value, subjectNameId, requestOrgId, requestId);
+            var result = m_dataProvider.GetPsExistsData(idRID, idType.Value, idValue, purposeOfUse.Value, subjectNameId, requestOrgId, requestId);
 
             if (m_logger.IsEnabled(LogLevel.Debug))
             {
@@ -102,6 +103,7 @@ namespace cz.kr_vysocina.nis.v11.api.Controllers
         [Produces("application/octet-stream")]
         public IActionResult GetPsCda(
             [FromQuery] [Required] string sourceIdentifier,
+            [FromQuery] string idRID,
             [FromQuery] [Required] IdType? idType,
             [FromQuery] [Required] string idValue,
             [FromQuery] [Required] PurposeOfUse? purposeOfUse,
@@ -133,7 +135,7 @@ namespace cz.kr_vysocina.nis.v11.api.Controllers
                 return BadRequest("Required parameter is null or empty");
             }
 
-            var result = m_dataProvider.GetPsCdaData(sourceIdentifier, idType.Value, idValue, purposeOfUse.Value, subjectNameId,
+            var result = m_dataProvider.GetPsCdaData(sourceIdentifier, idRID, idType.Value, idValue, purposeOfUse.Value, subjectNameId,
                 requestOrgId, cdaType, cdaId, cdaOid, requestId);
 
             if (m_logger.IsEnabled(LogLevel.Debug))

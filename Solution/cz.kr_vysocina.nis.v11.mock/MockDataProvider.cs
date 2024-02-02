@@ -37,6 +37,7 @@ namespace cz.kr_vysocina.nis.v11.mock
         }
 
         public GetPsExistsResponseModel GetPsExistsData(
+            string idRID,
             IdType idType,
             string idValue,
             PurposeOfUse purposeOfUse,
@@ -116,6 +117,7 @@ namespace cz.kr_vysocina.nis.v11.mock
 
         public byte[] GetPsCdaData(
             string sourceIdentifier,
+            string idRID,
             IdType idType,
             string idValue,
             PurposeOfUse purposeOfUse,
