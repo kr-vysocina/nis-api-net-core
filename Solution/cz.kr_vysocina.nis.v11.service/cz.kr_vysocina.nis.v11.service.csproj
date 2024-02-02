@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <AssemblyName>cz.kr_vysocina.nis.v11.service</AssemblyName>
         <RootNamespace>cz.kr_vysocina.nis.v11.service</RootNamespace>
         <Title>NIS API v11</Title>
@@ -17,8 +17,8 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer" Version="2.2.0" />
-      <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
-      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="5.5.1" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="6.5.0" />
     </ItemGroup>
 
 </Project>
