@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace cz.kr_vysocina.nis.v11.core.Models.GetPsExists
@@ -24,5 +25,18 @@ namespace cz.kr_vysocina.nis.v11.core.Models.GetPsExists
         
         [XmlElement(ElementName="documentHash")]
         public string DocumentHash { get; set; }
+        
+        [XmlElement(ElementName="reasonOfHospitalisation")]
+        public ReasonOfHospitalisationModel ReasonOfHospitalisation { get; set; }
+        
+        [XmlArray("authors")]
+        [XmlArrayItem("author")]
+        public List<AuthorModel> Authors { get; set; }
+        
+        [XmlElement(ElementName="documentFileType")]
+        public DocumentFileTypeEnum DocumentFileType { get; set; }
+        
+        [XmlElement(ElementName="confidentialityCode")]
+        public ConfidentialityCodeEnum ConfidentialityCode { get; set; }
     }
 }
