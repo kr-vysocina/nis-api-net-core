@@ -5,8 +5,11 @@ namespace cz.kr_vysocina.nis.v11.core.Models.GetPsExists
 {
     public class DocumentMetadataModel
     {
-        [XmlElement(ElementName="type")]
-        public string Type { get; set; }
+        [XmlElement(ElementName="typeLOINC")]
+        public string TypeLOINC { get; set; }
+        
+        [XmlElement(ElementName="typeOID")]
+        public string TypeOID { get; set; }
 
         [XmlElement(ElementName="label")]
         public string Label { get; set; }
