@@ -7,5 +7,8 @@ namespace cz.kr_vysocina.nis.v11.core.Models
 
         [System.Runtime.Serialization.EnumMember(Value = @"L3")]
         L3 = 1,
+        
+        [System.Runtime.Serialization.EnumMember(Value = @"OTHER")]
+        OTHER = 2,
     }
 }
