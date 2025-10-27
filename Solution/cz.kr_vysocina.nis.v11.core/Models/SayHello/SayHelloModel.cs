@@ -8,6 +8,12 @@ namespace cz.kr_vysocina.nis.v11.core.Models.SayHello
     {
         [XmlElement(ElementName="description")]
         public string Description { get; set; }
+        
+        [XmlElement(ElementName="wave")]
+        public string Wave { get; set; }
+        
+        [XmlElement(ElementName="ridOnly")]
+        public bool RidOnly { get; set; }
 
         [XmlElement(ElementName="servertime")]
         public string ServerTime { get; set; }
