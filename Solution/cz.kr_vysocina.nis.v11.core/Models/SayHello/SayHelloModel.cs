@@ -13,7 +13,7 @@ namespace cz.kr_vysocina.nis.v11.core.Models.SayHello
         public string Wave { get; set; }
         
         [XmlElement(ElementName="ridOnly")]
-        public bool RidOnly { get; set; }
+        public bool? RidOnly { get; set; }
 
         [XmlElement(ElementName="servertime")]
         public string ServerTime { get; set; }
