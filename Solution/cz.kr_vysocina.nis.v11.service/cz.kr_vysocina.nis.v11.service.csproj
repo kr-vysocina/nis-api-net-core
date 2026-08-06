@@ -6,7 +6,7 @@
         <RootNamespace>cz.kr_vysocina.nis.v11.service</RootNamespace>
         <Title>NIS API v11</Title>
         <Authors>scalesoft s.r.o</Authors>
-        <PackageVersion>1.0.6</PackageVersion>
+        <PackageVersion>2.0.0</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -16,7 +16,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer" Version="2.2.0" />
       <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
       <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="6.5.0" />
     </ItemGroup>
